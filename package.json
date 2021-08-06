@@ -1,0 +1,23 @@
+{
+  "name": "algoexpert-in-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/letempest/algoexpert-in-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/letempest/algoexpert-in-action/issues"
+  },
+  "homepage": "https://github.com/letempest/algoexpert-in-action#readme",
+  "devDependencies": {
+    "parcel": "^2.0.0-rc.0"
+  }
+}
