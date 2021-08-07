@@ -1,9 +1,9 @@
-// Given an unsorted array, find out the longest subarray which if this subarray is sorted in place, the original
+// Given an unsorted array, find out the smallest subarray which if this subarray is sorted in place, the original
 // array would also be sorted. the algorithm should return a tuple [subarrayStartIdx, subarrayEndIdx]
 // e.g. for the below input, the result should be [3, 9], i.e. subarray = originArr.slice(3, 9+1)
 const input = [1, 2, 4, 7, 10, 11, 7, 12, 6, 7, 16, 18, 19];
 
-// my first try, w/out helper func,it works but focusing on edge cases too much, the logic is obscure�
+// my first try, w/out helper func,it works but focusing on edge cases too much, the logic is obscure
 const subarraySort = (arr: number[]): [number, number] => {
   let cursor: number = 0;
   let left: number | null = null,

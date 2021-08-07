@@ -1,4 +1,4 @@
-// See how the expert solve this problem elegantly�
+// See how the expert solve this problem elegantly
 
 const subArraySort = (array: number[]): [number, number] => {
   let minOutOfOrder = Number.POSITIVE_INFINITY;
