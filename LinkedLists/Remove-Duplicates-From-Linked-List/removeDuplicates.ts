@@ -3,7 +3,7 @@
 // Output: 1 -> 3 -> 4 -> 5 -> 6
 // Big O: O(n) Time | O(1) Space
 
-import { SinglyLinkedList } from '../../src/data-structure-implementation/SinglyLinkList';
+import { SinglyLinkedList } from '../SinglyLinkList';
 
 const removeDuplicatesFromLinkedList = (
   list: SinglyLinkedList
