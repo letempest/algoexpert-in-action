@@ -46,6 +46,8 @@ export default class BST {
     return false;
   }
 
+  // Average: O(Log(N)) time | O(1) space
+  // Worst: O(N) time | O(N) space
   remove(this: BST, val: number, parentNode?: BST): BST | void {
     let currentNode: BST | null = this;
     while (currentNode) {

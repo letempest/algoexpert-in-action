@@ -6,6 +6,7 @@ class GraphNode {
     this.children.push(node);
   }
 
+  // O(V+E) Time, where V = vertex, E = edge | O(V) Space
   depthFirstSearch(this: GraphNode, array: string[]): string[] {
     array.push(this.name);
     for (const child of this.children) {
