@@ -24,6 +24,6 @@ const hasSingleCycle = (array: number[]): boolean => {
   return currentIdx === STARTING_IDX;
 };
 
-// true, 2 -> 1 -> -4 -> 2 -> 3 -> -1 -> 2
+// true, 2 -> 1 -> -4 -> 2 -> 3 -> -4 -> 2
 console.log(hasSingleCycle([2, 3, 1, -4, -4, 2]));
 console.log(hasSingleCycle([1, -1, -1, 1]));
