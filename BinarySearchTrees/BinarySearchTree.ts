@@ -84,7 +84,7 @@ export default class BST {
             // which means discarding the whole BST, nothing we can do with this implementation
             return;
           }
-        } else if (parentNode!.left == currentNode) {
+        } else if (parentNode!.left === currentNode) {
           // the node to be removed is the left child of its parent, and this node has 0 or 1 child
           parentNode!.left = currentNode.left ?? currentNode.right;
         } else if (parentNode!.right === currentNode) {
