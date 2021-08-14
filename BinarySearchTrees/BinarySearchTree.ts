@@ -108,23 +108,23 @@ export default class BST {
 }
 
 // initialize and insert
-const bst2 = new BST(10)
-  .insert(5)
-  .insert(15)
-  .insert(2)
-  .insert(5)
-  .insert(13)
-  .insert(22)
-  .insert(1)
-  .insert(14)
-  .insert(12);
+// const bst2 = new BST(10)
+//   .insert(5)
+//   .insert(15)
+//   .insert(2)
+//   .insert(5)
+//   .insert(13)
+//   .insert(22)
+//   .insert(1)
+//   .insert(14)
+//   .insert(12);
 
 // console.log(bst2);
 
 // find
-console.log(bst2.contains(19));
-console.log(bst2.contains(13));
+// console.log(bst2.contains(19));
+// console.log(bst2.contains(13));
 
 // delete
-console.log(bst2.remove(10));
+// console.log(bst2.remove(10));
 // console.log(new BST(123).remove(123));
