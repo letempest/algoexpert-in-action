@@ -12,7 +12,8 @@ import BST from '../BinarySearchTree';
 //   }
 // };
 
-// // My solution: O(n) time | O(n) space
+// // My solution: O(n) time | O(nlog(n)) space?: avg. d = log(n) recursive calls,
+// for each call, creating two slice arrays which is (n) space
 // const minHeightBST = (array: number[]): BST | null => {
 //   // base case
 //   if (array.length === 0) return null;
