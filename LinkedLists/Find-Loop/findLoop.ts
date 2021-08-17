@@ -1,8 +1,9 @@
 // Given a variation of linked list, where there's a loop inside it, find out the node from which the loop starts
 // a very clever conceptual solution, draw out the list and quantify the traveling distance
+// Two pointers start from head, first pointer travels one node at a time; second pointer travels at 2 times speed (skip one node at a time)
 // says D = (head to loopStart), P = (loopStart to overlap node), R = (overlap node to loopStart),
 // and length of the linked list as T, first pointer travels distance L, hence second pointer travels 2L
-// there's relations: L = D + P; 2L = 2D + 2P = T + P; hence T = R + P = 2D + P => (R === D)
+// there's relations: L = D + P; 2L = 2D + 2P = T + P; hence T = D + R + P = 2D + P => (R === D)
 
 import { LinkNode } from '../SinglyLinkList';
 
