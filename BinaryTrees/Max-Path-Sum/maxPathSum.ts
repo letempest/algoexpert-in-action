@@ -23,7 +23,7 @@ const getMaxSum = (tree: BinaryTree | null): RunningInfo => {
     getMaxSum(tree.right);
 
   const maxChildSumAsBranch = Math.max(leftMaxSumAsBranch, rightMaxSumAsBranch);
-  // sum of one branch, can be further added upon the parent node sum; tree.value could be negative, if so, then don't add it
+  // sum of one branch, can be further added upon the parent node sum; maxChildSumAsBranch could be negative, if so, then don't include any child branch
   const maxSumAsBranch = Math.max(maxChildSumAsBranch + tree.value, tree.value);
   // with current node as root node, get the max sum, could be a path connecting this node and both left/right sub-tree
   // in this case, the sum should be recorded for comparison but cannot be further accumulated by the parent node
