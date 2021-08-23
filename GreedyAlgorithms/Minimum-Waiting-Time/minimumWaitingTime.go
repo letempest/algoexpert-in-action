@@ -13,9 +13,7 @@ func main() {
 // Big O: O(n*log(n)) time for sorting the input array | O(1) space
 func minimumWaitingtime(queries []int) int {
 	// Sorting in place
-	sort.Slice(queries, func(i, j int) bool {
-		return queries[i] < queries[j]
-	})
+	sort.Ints(queries)
 
 	totalWaitingTime := 0
 	for i, duration := range queries {
