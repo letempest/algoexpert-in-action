@@ -49,8 +49,8 @@ func numberOfWaysToTraverseGraph(width, height int) int {
 
 // Solution 3: leveraging math deduction, given the fact that we can only go right/down, result set would be somewhat related to
 // permutation of [right,right,right..., down, down, ..., down], where there's width amount of right element, and height amount of down element
-// 											\ |  /							\   |   /
-// 												width									height
+//                       \ |  /               \   |   /
+//                       width                  height
 // and permutation of n yields a result of n!
 // O(n + m) time | O(1) space
 // func numberOfWaysToTraverseGraph(width, height int) int {
