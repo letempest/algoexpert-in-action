@@ -2,7 +2,7 @@
 
 ### Solve in typescript and golang
 
-#### Progress: 49/160 | Target: 100/160
+#### Progress: 50/160 | Target: 100/160
 
 _(mostly the common questions for normal people, I'll leave the wacky mind-twisting ones to Einstein)_
 
