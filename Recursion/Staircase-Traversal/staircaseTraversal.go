@@ -85,7 +85,7 @@ func staircaseTraversal(height, maxSteps int) int {
 	waysToTop := []int{1}
 
 	for currentHeight := 1; currentHeight < height+1; currentHeight++ {
-		startOfWindow := currentHeight - maxSteps - 1 // acutually is the starting index of PREVIOUS window, for every iteration, subtract this one
+		startOfWindow := currentHeight - maxSteps - 1 // actually is the starting index of PREVIOUS window, for every iteration, subtract this one
 		endOfWindows := currentHeight - 1
 		if startOfWindow >= 0 {
 			currentNumberOfWays -= waysToTop[startOfWindow]
