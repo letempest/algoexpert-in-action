@@ -1,19 +1,15 @@
 // golang entry for each AlgoExpert challenge
-// # Heap/Min-Heap-Construction
+// # [Graphs]/Rectangle-Mania
 
 package main
 
 import (
 	"fmt"
 
-	minheap "github.com/letempest/algoexpert-in-action/Heaps/Min-Heap-Construction"
+	graph "github.com/letempest/algoexpert-in-action/Graphs/Rectangle-Mania"
 )
 
 func main() {
-	heap := minheap.New([]int{30, 102, 23, 17, 18, 9, 44, 12, 31})
-	// expect to be [9, 12, 23, 17, 18, 30, 44, 102, 31]
-	fmt.Println(heap.Heap)
-	// heap.Insert(7)
-	// heap.Remove()
-	heap.Peak()
+	coords := [][2]int{{0, 0}, {0, 1}, {1, 0}, {1, 1}, {2, 0}, {2, 1}}
+	fmt.Println(graph.RectangleMania(coords))
 }
