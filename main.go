@@ -1,15 +1,36 @@
 // golang entry for each AlgoExpert challenge
-// # [Graphs]/Rectangle-Mania
+// # [Arrays]/Apartment-Hunting
 
 package main
 
 import (
 	"fmt"
 
-	graph "github.com/letempest/algoexpert-in-action/Graphs/Rectangle-Mania"
+	array "github.com/letempest/algoexpert-in-action/Arrays/Apartment-Hunting"
 )
 
 func main() {
-	coords := [][2]int{{0, 0}, {0, 1}, {1, 0}, {1, 1}, {2, 0}, {2, 1}}
-	fmt.Println(graph.RectangleMania(coords))
+	blocks := make([]map[string]struct{}, 5)
+	var empty struct{}
+	blocks[0] = map[string]struct{}{
+		"Sc": empty,
+	}
+	blocks[1] = map[string]struct{}{
+		"G": empty,
+	}
+	blocks[2] = map[string]struct{}{
+		"G":  empty,
+		"Sc": empty,
+	}
+	blocks[3] = map[string]struct{}{
+		"Sc": empty,
+	}
+	blocks[4] = map[string]struct{}{
+		"Sc": empty,
+		"St": empty,
+	}
+	reqs := []string{"G", "Sc", "St"} // requirements, G - Gym, Sc - School, St - Store
+
+	// should yield 3, which means block at index 3 has the smallest distance to all facilities in requirement array
+	fmt.Println(array.ApartmentHunting(blocks, reqs))
 }
