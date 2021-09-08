@@ -2,7 +2,7 @@
 
 ### Solved in typescript or golang
 
-#### Progress: 70/160 | Target: 100/160
+#### Progress: 71/160 | Target: 100/160
 
 1~3 question(s) per day, my head hurts, I'm feeling dizzy, but I'm still alive (and actually getting better).
 
