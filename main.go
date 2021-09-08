@@ -1,14 +1,16 @@
 // golang entry for each AlgoExpert challenge
-// # [Arrays]/Apartment-Hunting
+// # [Recursion]/Number Of Binary Tree Topologies
 
 package main
 
 import (
 	"fmt"
 
-	sort "github.com/letempest/algoexpert-in-action/Sorting/Bubble-Sort"
+	recursion "github.com/letempest/algoexpert-in-action/Recursion/Number-Of-Binary-Tree-Topologies"
 )
 
 func main() {
-	fmt.Println(sort.BubbleSort([]int{8, 5, 2, 9, 5, 6, 3}))
+	fmt.Println(recursion.NumberOfBinaryTreeTopologies(3))
+	fmt.Println(recursion.NumberOfBinaryTreeTopologies(5))
+	fmt.Println(recursion.NumberOfBinaryTreeTopologies(21))
 }
