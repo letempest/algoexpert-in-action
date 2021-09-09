@@ -1,17 +1,16 @@
 // golang entry for each AlgoExpert challenge
-// #[Strings]/Reverse Words In String
+// #[Stacks]/Largest Rectangle Under Skyline
 
 package main
 
 import (
 	"fmt"
 
-	string "github.com/letempest/algoexpert-in-action/Strings/Reverse-Words-In-String"
+	stack "github.com/letempest/algoexpert-in-action/Stacks/Largest-Rectangle-Under-Skyline"
 )
 
 func main() {
-	fmt.Printf("reversed result: %#v\n", string.ReverseWordsInString("AlgoExpert  is the   best!"))
-	fmt.Printf("reversed result: %#v\n", string.ReverseWordsInString("   a bc  def    ghij      !hey  xyz"))
-	fmt.Printf("reversed result: %#v\n", string.ReverseWordsInString("abcdefg"))
-	fmt.Printf("reversed result: %#v\n", string.ReverseWordsInString("     "))
+	buildings := []int{1, 3, 3, 2, 4, 1, 5, 3, 2}
+	maxArea := stack.LargestRectangleUnderSkyline(buildings)
+	fmt.Println(maxArea)
 }
