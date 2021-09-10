@@ -1,16 +1,14 @@
 // golang entry for each AlgoExpert challenge
-// #[Stacks]/Largest Rectangle Under Skyline
+// #[Sorting]/Insertion Sort
 
 package main
 
 import (
 	"fmt"
 
-	stack "github.com/letempest/algoexpert-in-action/Stacks/Largest-Rectangle-Under-Skyline"
+	sort "github.com/letempest/algoexpert-in-action/Sorting/Insertion-Sort"
 )
 
 func main() {
-	buildings := []int{1, 3, 3, 2, 4, 1, 5, 3, 2}
-	maxArea := stack.LargestRectangleUnderSkyline(buildings)
-	fmt.Println(maxArea)
+	fmt.Println(sort.InsertionSort([]int{8, 5, 2, 9, 5, 6, 3}))
 }
