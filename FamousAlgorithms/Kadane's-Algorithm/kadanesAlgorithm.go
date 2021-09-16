@@ -11,9 +11,13 @@ func main() {
 }
 
 // Big O: O(n) time | O(1) space
-// maxEndingHere represents the sum of subarray from index 0 to every iteration index i, i.e. for subarray array[0:i],
-// max sum ending here(for this subarray) is the larger value between a) previous maxEndingHere (value at previous index) plus current value,
-// or b) value at current index alone
+// use dynamic programming, find the maximum sum could be generated from sub arrays,
+// maxEndingHere represents the sum of subarray from index 0 to every iteration
+// index i, i.e. for subarray array[0:i], max sum ending here(for this subarray) is
+// the larger value between a) previous maxEndingHere (value at previous index) plus
+// current value, or b) value at current index alone (if previous maxEndingHere is negative)
+// if case (b) happens, it means the start of subarray should change to current index
+// (just discard all values in front, since their sum is smaller than 0)
 func kadanesAlgorithm(array []int) int {
 	maxEndingHere, maxSoFar := array[0], array[0]
 	for i := 1; i < len(array); i++ {
