@@ -9,10 +9,15 @@ type MinHeap struct {
 }
 
 // Big O: O(n) time | O(1) space
-func New(array []int) MinHeap {
+func New(array []int) *MinHeap {
 	firstParentIdx := int(math.Floor(float64(len(array)-2) / 2))
-	minHeap := MinHeap{
-		Heap: array,
+	// encounter a weird case here for problem [Heaps/Sorted K-Sorted Array]
+	// if we pass 'Heap: array' directly below, when sorting the same array
+	// in place, the heap value is accidently change too, so make a copy here
+	copyArr := make([]int, len(array))
+	copy(copyArr, array)
+	minHeap := &MinHeap{
+		Heap: copyArr,
 	}
 	for currentIdx := firstParentIdx; currentIdx >= 0; currentIdx-- {
 		minHeap.siftDown(currentIdx, len(array)-1)
@@ -66,6 +71,7 @@ func (h *MinHeap) Remove() int {
 	valueToRemove := h.Heap[len(h.Heap)-1]
 	h.Heap = h.Heap[:len(h.Heap)-1]
 	h.siftDown(0, len(h.Heap)-1)
+	// fmt.Printf("value to remove: %v, heap: %v\n", valueToRemove, h.Heap)
 	return valueToRemove
 }
 

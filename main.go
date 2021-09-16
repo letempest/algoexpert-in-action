@@ -1,17 +1,16 @@
 // golang entry for each AlgoExpert challenge
-// #[Famous Algorithms]/Topological Sort
+// #[Heaps]/Sort K-Sorted Array
 
 package main
 
 import (
 	"fmt"
 
-	topology "github.com/letempest/algoexpert-in-action/FamousAlgorithms/Topological-Sort"
+	sort "github.com/letempest/algoexpert-in-action/Heaps/Sort-K-Sorted-Array"
 )
 
 func main() {
-	jobs := []int{1, 2, 3, 4}
-	dependencies := [][2]int{{1, 2}, {1, 3}, {3, 2}, {4, 2}, {4, 3}}
-	sortedOrder := topology.TopologicalSort(jobs, dependencies)
-	fmt.Println(sortedOrder)
+	array := []int{3, 2, 1, 5, 4, 7, 6, 5}
+	sort.SortKSortedArray(array, 3) // sorted in place
+	fmt.Println(array)
 }
