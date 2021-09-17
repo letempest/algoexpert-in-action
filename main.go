@@ -1,16 +1,21 @@
 // golang entry for each AlgoExpert challenge
-// #[Heaps]/Sort K-Sorted Array
+// #[Strings]/Pattern Matcher
 
 package main
 
 import (
 	"fmt"
 
-	sort "github.com/letempest/algoexpert-in-action/Heaps/Sort-K-Sorted-Array"
+	string "github.com/letempest/algoexpert-in-action/Strings/Pattern-Matcher"
 )
 
 func main() {
-	array := []int{3, 2, 1, 5, 4, 7, 6, 5}
-	sort.SortKSortedArray(array, 3) // sorted in place
-	fmt.Println(array)
+	pattern := "xxyxxy"
+	matchString := "gogopowerrangergogopowerranger"
+	matched, err := string.PatternMatcher(pattern, matchString)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Printf("%#v\n", matched)
 }
