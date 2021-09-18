@@ -1,16 +1,20 @@
 // golang entry for each AlgoExpert challenge
-// #[Dynamic Programming]/Water Area
+// #[Greedy Algorithms]/Tandem Bicycle
 
 package main
 
 import (
 	"fmt"
 
-	dp "github.com/letempest/algoexpert-in-action/DynamicProgramming/Water-Area"
+	greedy "github.com/letempest/algoexpert-in-action/GreedyAlgorithms/Tandem-Bicycle"
 )
 
 func main() {
-	heights := []int{0, 8, 0, 0, 5, 0, 0, 10, 0, 0, 1, 1, 0, 3}
-	area := dp.WaterArea(heights)
-	fmt.Println(area)
+	redShirtSpeeds := []int{5, 5, 3, 9, 2}
+	blueShirtSpeeds := []int{3, 6, 7, 2, 1}
+	fastest := true
+	speed := greedy.TandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest)
+	fmt.Println(speed)
+	speed = greedy.TandemBicycle(redShirtSpeeds, blueShirtSpeeds, !fastest)
+	fmt.Println(speed)
 }
