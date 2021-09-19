@@ -1,20 +1,34 @@
 // golang entry for each AlgoExpert challenge
-// #[Greedy Algorithms]/Tandem Bicycle
+// #[Linked List]/Linked List Palindrome
 
 package main
 
 import (
 	"fmt"
 
-	greedy "github.com/letempest/algoexpert-in-action/GreedyAlgorithms/Tandem-Bicycle"
+	linkedList "github.com/letempest/algoexpert-in-action/LinkedLists/Linked-List-Palindrome"
 )
 
 func main() {
-	redShirtSpeeds := []int{5, 5, 3, 9, 2}
-	blueShirtSpeeds := []int{3, 6, 7, 2, 1}
-	fastest := true
-	speed := greedy.TandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest)
-	fmt.Println(speed)
-	speed = greedy.TandemBicycle(redShirtSpeeds, blueShirtSpeeds, !fastest)
-	fmt.Println(speed)
+	// example 1, should yield true
+	head := linkedList.Node{Value: 0}
+	func(node *linkedList.Node, vals ...int) {
+		nextNode := node
+		for _, num := range vals {
+			nextNode = nextNode.Add(num)
+		}
+	}(&head, 1, 2, 2, 1, 0)
+
+	fmt.Printf("Is palindrome? %v\n", linkedList.LinkedListPalindrome(&head))
+
+	// example 2, should yield false
+	head = linkedList.Node{Value: 0}
+	func(node *linkedList.Node, vals ...int) {
+		nextNode := node
+		for _, num := range vals {
+			nextNode = nextNode.Add(num)
+		}
+	}(&head, 1, 2, 2, 1, 1)
+
+	fmt.Printf("Is palindrome? %v\n", linkedList.LinkedListPalindrome(&head))
 }
