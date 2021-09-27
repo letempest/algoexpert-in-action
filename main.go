@@ -1,15 +1,15 @@
 // golang entry for each AlgoExpert challenge
-// #[Sorting]/Selection Sort
+// #[Strings]/Longest Palindromic Substring
 
 package main
 
 import (
 	"fmt"
 
-	sort "github.com/letempest/algoexpert-in-action/Sorting/Selection-Sort"
+	string "github.com/letempest/algoexpert-in-action/Strings/Longest-Palindromic-Substring"
 )
 
 func main() {
-	srcArray := []int{8, 5, 2, 9, 5, 6, 3}
-	fmt.Println(sort.SelectionSort(srcArray)) // should print [2, 3, 5, 5, 6, 8, 9]
+	lps := string.LongestPalindromicSubstring("abaxyzzyxf")
+	fmt.Println(lps) // should return "xyzzyx"
 }
