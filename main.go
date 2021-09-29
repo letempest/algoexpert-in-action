@@ -1,15 +1,21 @@
 // golang entry for each AlgoExpert challenge
-// #[Arrays]/Sorted Squared Array
+// #[Arrays]/Tournament Winner
 
 package main
 
 import (
 	"fmt"
 
-	array "github.com/letempest/algoexpert-in-action/Arrays/Sorted-Squared-Array"
+	array "github.com/letempest/algoexpert-in-action/Arrays/Tournament-Winner"
 )
 
 func main() {
-	arr := []int{-9, -6, -1, 2, 4, 12}
-	fmt.Println(array.SortedSquaredArray(arr))
+	competitions := [][2]string{
+		{"HTML", "C#"},
+		{"C#", "python"},
+		{"python", "HTML"},
+	}
+	results := []int{0, 0, 1}
+
+	fmt.Println(array.TournamentWinner(competitions, results)) // "python"
 }
