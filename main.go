@@ -1,21 +1,16 @@
 // golang entry for each AlgoExpert challenge
-// #[Arrays]/Tournament Winner
+// #[Arrays]/Non-Constructible Change
 
 package main
 
 import (
 	"fmt"
 
-	array "github.com/letempest/algoexpert-in-action/Arrays/Tournament-Winner"
+	array "github.com/letempest/algoexpert-in-action/Arrays/Non-Constructible-Change"
 )
 
 func main() {
-	competitions := [][2]string{
-		{"HTML", "C#"},
-		{"C#", "python"},
-		{"python", "HTML"},
-	}
-	results := []int{0, 0, 1}
-
-	fmt.Println(array.TournamentWinner(competitions, results)) // "python"
+	coins := []int{5, 7, 1, 1, 2, 3, 22}
+	// should yield 20, can create change up to 19, 20 is not constructible
+	fmt.Println(array.NonConstructibleChange(coins))
 }
