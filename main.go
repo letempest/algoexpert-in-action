@@ -1,16 +1,16 @@
 // golang entry for each AlgoExpert challenge
-// #[Arrays]/Non-Constructible Change
+// #[Binary Search Trees]/Same BSTs
 
 package main
 
 import (
 	"fmt"
 
-	array "github.com/letempest/algoexpert-in-action/Arrays/Non-Constructible-Change"
+	bst "github.com/letempest/algoexpert-in-action/BinarySearchTrees/Same-BSTs"
 )
 
 func main() {
-	coins := []int{5, 7, 1, 1, 2, 3, 22}
-	// should yield 20, can create change up to 19, 20 is not constructible
-	fmt.Println(array.NonConstructibleChange(coins))
+	treeOne := []int{10, 15, 8, 12, 94, 81, 5, 2, 11}
+	treeTwo := []int{10, 8, 5, 15, 2, 12, 11, 94, 81}
+	fmt.Printf("With these two arrays can we construct two BSTs which are actually the same? %v\n", bst.SameBSTs(treeOne, treeTwo))
 }
