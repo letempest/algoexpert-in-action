@@ -1,16 +1,15 @@
 // golang entry for each AlgoExpert challenge
-// #[Heaps]/Laptop Rentals
+// #[Arrays]/Sorted Squared Array
 
 package main
 
 import (
 	"fmt"
 
-	heap "github.com/letempest/algoexpert-in-action/Heaps/Laptop-Rentals"
+	array "github.com/letempest/algoexpert-in-action/Arrays/Sorted-Squared-Array"
 )
 
 func main() {
-	times := [][2]int{{0, 2}, {1, 4}, {4, 6}, {0, 4}, {7, 8}, {9, 11}, {3, 10}}
-	numOfLaptopsNeeded := heap.LaptopRentals(times)
-	fmt.Println(numOfLaptopsNeeded)
+	arr := []int{-9, -6, -1, 2, 4, 12}
+	fmt.Println(array.SortedSquaredArray(arr))
 }
