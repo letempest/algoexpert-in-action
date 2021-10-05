@@ -1,17 +1,16 @@
 // golang entry for each AlgoExpert challenge
-// #[Greedy Algorithms]/Task Assignment
+// #[Searching]/Quickselect
 
 package main
 
 import (
 	"fmt"
 
-	greedy "github.com/letempest/algoexpert-in-action/GreedyAlgorithms/Task-Assignment"
+	search "github.com/letempest/algoexpert-in-action/Searching/Quickselect"
 )
 
 func main() {
-	workers := 3
-	tasks := []int{1, 3, 5, 3, 1, 4}
-	pairedTasks := greedy.TaskAssignment(workers, tasks)
-	fmt.Println(pairedTasks)
+	array := []int{8, 5, 2, 9, 7, 6, 3}
+	// should return "5", third smallest value is 5
+	fmt.Println(search.Quickselect(array, 3))
 }
