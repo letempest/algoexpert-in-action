@@ -1,19 +1,17 @@
 // golang entry for each AlgoExpert challenge
-// #[Dynamic Programming]/Knapsack Problem
+// #[Greedy Algorithms]/Task Assignment
 
 package main
 
 import (
 	"fmt"
 
-	dp "github.com/letempest/algoexpert-in-action/DynamicProgramming/Knapsack-Problem"
+	greedy "github.com/letempest/algoexpert-in-action/GreedyAlgorithms/Task-Assignment"
 )
 
 func main() {
-	items := [][2]int{{1, 2}, {4, 3}, {5, 6}, {6, 7}} // [item's monetary value, item's weight][]
-	capacity := 10
-	values, itemsInKnapsack := dp.KnapsackProblem(items, capacity)
-	// should print out 10, [1, 3], which means item 1 and 3 are put into the knapsack,
-	// accumulating a largest monetary value of 10
-	fmt.Println(values, itemsInKnapsack)
+	workers := 3
+	tasks := []int{1, 3, 5, 3, 1, 4}
+	pairedTasks := greedy.TaskAssignment(workers, tasks)
+	fmt.Println(pairedTasks)
 }
