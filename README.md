@@ -2,8 +2,6 @@
 
 ### Solved in typescript or golang
 
-#### Progress: 99/160 | Target: 100/160
+#### Progress: 100/160 🙌 | Target: 100/160
 
-1~3 question(s) per day, my head hurts, I'm feeling dizzy, yet I'm still alive (and actually getting better).
-
-Solutions in typescript / golang alternatively, then transcribe into the other one a few weeks later if I were going to revisit the same question.
+_From August 5th to October 8th 2021, after two months of suffering, I did it! 🎉🎉_

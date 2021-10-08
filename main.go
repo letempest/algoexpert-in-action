@@ -1,15 +1,25 @@
 // golang entry for each AlgoExpert challenge
-// #[Strings]/Run-Length Encoding
+// #[Famous Algorithms]/Dijkstra's Algorithm
 
 package main
 
 import (
 	"fmt"
 
-	strings "github.com/letempest/algoexpert-in-action/Strings/Run-Length-Encoding"
+	famous "github.com/letempest/algoexpert-in-action/FamousAlgorithms/Dijkstras-Algorithm"
 )
 
 func main() {
-	fmt.Printf("%#v\n", strings.RunLengthEncoding("AAAAAAAAAAAAABBCCCCDD")) // "9A4A2B4C2D"
-	fmt.Printf("%#v\n", strings.RunLengthEncoding("Z"))                     // "1Z"
+	edges := [][][2]int{
+		{{1, 7}},
+		{{2, 6}, {3, 20}, {4, 3}},
+		{{3, 14}},
+		{{4, 2}},
+		{},
+		{},
+	}
+	minDistances := famous.DijkstrasAlgorithm(0, edges)
+	// minimum distances from starting vertex 0 to everty other vertices
+	// should return [0, 7, 13, 27, 10, -1]
+	fmt.Println(minDistances)
 }
