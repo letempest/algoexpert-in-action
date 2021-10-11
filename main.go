@@ -1,25 +1,16 @@
 // golang entry for each AlgoExpert challenge
-// #[Famous Algorithms]/Dijkstra's Algorithm
+// #[Sorting]/Heap Sort
 
 package main
 
 import (
 	"fmt"
 
-	famous "github.com/letempest/algoexpert-in-action/FamousAlgorithms/Dijkstras-Algorithm"
+	sort "github.com/letempest/algoexpert-in-action/Sorting/Heap-Sort"
 )
 
 func main() {
-	edges := [][][2]int{
-		{{1, 7}},
-		{{2, 6}, {3, 20}, {4, 3}},
-		{{3, 14}},
-		{{4, 2}},
-		{},
-		{},
-	}
-	minDistances := famous.DijkstrasAlgorithm(0, edges)
-	// minimum distances from starting vertex 0 to everty other vertices
-	// should return [0, 7, 13, 27, 10, -1]
-	fmt.Println(minDistances)
+	array := []int{8, 5, 2, 9, 5, 6, 3}
+	sort.HeapSort(array)
+	fmt.Println(array) // [2, 3, 5, 5, 6, 8, 9], sorting in place
 }
