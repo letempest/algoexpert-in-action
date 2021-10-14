@@ -1,15 +1,16 @@
 // golang entry for each AlgoExpert challenge
-// #[Sorting]/Merge Sort
+// #[Strings]/Generate Document
 
 package main
 
 import (
 	"fmt"
 
-	sort "github.com/letempest/algoexpert-in-action/Sorting/Merge-Sort"
+	string "github.com/letempest/algoexpert-in-action/Strings/Generate-Document"
 )
 
 func main() {
-	fmt.Println(sort.MergeSort([]int{8, 5, 2, 9, 5, 6, 3}))
-	fmt.Println(sort.MergeSort([]int{9, 8, 7, 6, 5, 4, 3, 2, 1}))
+	characters := "Bste!hetsi ogEAxpelrt x "
+	document := "AlgoExpert is the Best!"
+	fmt.Println(string.GenerateDocument(characters, document))
 }
