@@ -1,16 +1,15 @@
 // golang entry for each AlgoExpert challenge
-// #[Strings]/Generate Document
+// #[Strings]/First Non-Repeating Character
 
 package main
 
 import (
 	"fmt"
 
-	string "github.com/letempest/algoexpert-in-action/Strings/Generate-Document"
+	string "github.com/letempest/algoexpert-in-action/Strings/First-Non-Repeating-Character"
 )
 
 func main() {
-	characters := "Bste!hetsi ogEAxpelrt x "
-	document := "AlgoExpert is the Best!"
-	fmt.Println(string.GenerateDocument(characters, document))
+	fmt.Println(string.FirstNonRepeatingCharacter("coolcode")) // index 3
+	fmt.Println(string.FirstNonRepeatingCharacter("abcdcaf"))  // index 1
 }
