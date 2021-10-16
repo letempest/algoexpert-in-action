@@ -1,24 +1,23 @@
 // golang entry for each AlgoExpert challenge
-// #[Famous Algorithms]/A* Algorithm
+// #[Dynamic Programming]/Disk Stacking
 
 package main
 
 import (
 	"fmt"
 
-	famous "github.com/letempest/algoexpert-in-action/FamousAlgorithms/A-Star-Algorithm"
+	dp "github.com/letempest/algoexpert-in-action/DynamicProgramming/Disk-Stacking"
 )
 
 func main() {
-	graph := [][]int{
-		{0, 0, 0, 0, 0},
-		{0, 1, 1, 1, 0},
-		{0, 0, 0, 0, 0},
-		{1, 0, 1, 1, 1},
-		{0, 0, 0, 0, 0},
+	disks := [][3]int{
+		{2, 3, 4},
+		{2, 2, 1},
+		{2, 1, 2},
+		{4, 4, 5},
+		{2, 2, 8},
+		{3, 2, 3},
 	}
-
-	path := famous.AStarAlgorithm(0, 1, 4, 3, graph) // start: [0, 1] => end: [4, 3]
-	// Should return [[0, 1], [0, 0], [1, 0], [2, 0], [2, 1], [3, 1], [4, 1], [4, 2], [4, 3]]
-	fmt.Println(path)
+	stack := dp.DiskStacking(disks)
+	fmt.Println(stack)
 }
