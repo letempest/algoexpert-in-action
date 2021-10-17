@@ -1,17 +1,27 @@
 // golang entry for each AlgoExpert challenge
-// #[Greedy Algorithms]/Valid Starting City
+// #[Linked List]/Remove Kth Node From End
 
 package main
 
 import (
 	"fmt"
 
-	greedy "github.com/letempest/algoexpert-in-action/GreedyAlgorithms/Valid-Starting-City"
+	linkedlist "github.com/letempest/algoexpert-in-action/LinkedLists/Remove-Kth-Node-From-End"
 )
 
 func main() {
-	distances := []int{5, 25, 15, 10, 15}
-	fuel := []int{1, 2, 1, 0, 3}
-	milesPerGallon := 10
-	fmt.Println(greedy.ValidStartingCity(distances, fuel, milesPerGallon))
+	head := linkedlist.Node{Value: 0}
+	values := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
+	for currentNode, i := &head, 0; i < len(values); i++ {
+		nextNode := &linkedlist.Node{Value: values[i]}
+		currentNode.Next = nextNode
+		currentNode = nextNode
+	}
+
+	linkedlist.RemoveKthNodeFromEnd(head, 4)
+
+	for currentNode := &head; currentNode != nil; {
+		fmt.Println(currentNode.Value)
+		currentNode = currentNode.Next
+	}
 }
