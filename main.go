@@ -1,23 +1,17 @@
 // golang entry for each AlgoExpert challenge
-// #[Dynamic Programming]/Disk Stacking
+// #[Greedy Algorithms]/Valid Starting City
 
 package main
 
 import (
 	"fmt"
 
-	dp "github.com/letempest/algoexpert-in-action/DynamicProgramming/Disk-Stacking"
+	greedy "github.com/letempest/algoexpert-in-action/GreedyAlgorithms/Valid-Starting-City"
 )
 
 func main() {
-	disks := [][3]int{
-		{2, 3, 4},
-		{2, 2, 1},
-		{2, 1, 2},
-		{4, 4, 5},
-		{2, 2, 8},
-		{3, 2, 3},
-	}
-	stack := dp.DiskStacking(disks)
-	fmt.Println(stack)
+	distances := []int{5, 25, 15, 10, 15}
+	fuel := []int{1, 2, 1, 0, 3}
+	milesPerGallon := 10
+	fmt.Println(greedy.ValidStartingCity(distances, fuel, milesPerGallon))
 }
