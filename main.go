@@ -1,16 +1,25 @@
 // golang entry for each AlgoExpert challenge
-// #[Arrays]/Largest Range
+// #[Arrays]/Waterfall Streams
 
 package main
 
 import (
 	"fmt"
 
-	array "github.com/letempest/algoexpert-in-action/Arrays/Largest-Range"
+	array "github.com/letempest/algoexpert-in-action/Arrays/Waterfall-Streams"
 )
 
 func main() {
-	arr := []int{1, 11, 3, 0, 15, 5, 2, 4, 10, 7, 12, 6}
-	// Should return [0, 7], number range 0 - 7 are all in the array
-	fmt.Println(array.LargestRange(arr))
+	blocks := [][]int{
+		{0, 0, 0, 0, 0, 0, 0},
+		{1, 0, 0, 0, 0, 0, 0},
+		{0, 0, 1, 1, 1, 0, 0},
+		{0, 0, 0, 0, 0, 0, 0},
+		{1, 1, 1, 0, 0, 1, 0},
+		{0, 0, 0, 0, 0, 0, 1},
+		{0, 0, 0, 0, 0, 0, 0},
+	}
+	source := 3 // water flow from blocks[0][3]
+	streamsDistributionAtBottom := array.WaterfallStreams(blocks, source)
+	fmt.Println(streamsDistributionAtBottom)
 }
